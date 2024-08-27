@@ -228,58 +228,7 @@ export default function Example() {
   const DynamicComponent = () => {
     return (
       <View style={styles.section}>
-        {(crn === "001" ? data : adminData).map((item, index) => (
-          <View key={index}>
-            {item.isTitle ? (
-              <Text style={{ ...styles.sectionTitle, color: "black" }}>
-                {item.label}
-              </Text>
-            ) : (
-              <>
-                <View style={{ margin: 5 }}>
-                  <Text style={{ ...styles.label, marginBottom: 5 }}>
-                    {item.label}
-                  </Text>
-
-                  <Text style={styles.value}>{item.value}</Text>
-                </View>
-
-                {item.Profile && item.Profile.length > 0 && (
-                  <View style={styles.profileSection}>
-                    <Text style={styles.profileSectionTitle}>Reporting To</Text>
-
-                    {item.Profile.map((profileItem, profileIndex) => (
-                      <View key={profileIndex} style={styles.profileContainer}>
-                        <Image
-                          source={profileItem.image}
-                          style={styles.profileImage}
-                        />
-
-                        <View style={styles.profileInfo}>
-                          <Text style={styles.profileName}>
-                            {profileItem.Name}
-                          </Text>
-
-                          <Text style={styles.profileDetail}>
-                            Role: {profileItem.Role}
-                          </Text>
-
-                          <Text style={styles.profileDetail}>
-                            Mobile: {profileItem.Mobile}
-                          </Text>
-
-                          <Text style={styles.profileDetail}>
-                            Employee Code: {profileItem.ECode}
-                          </Text>
-                        </View>
-                      </View>
-                    ))}
-                  </View>
-                )}
-              </>
-            )}
-          </View>
-        ))}
+          
       </View>
     );
   };
@@ -309,27 +258,7 @@ export default function Example() {
               source={image9}
 
               style={styles.profileAvatar} /> */}
-{
-  
-  (crn === "001" ? data : adminData).map((item, index) => (
-    <View key={index}>
-      {item.label === "Name" ? (
-        <Text style={styles.profileName}>{item.value}</Text>
-      ) : (
-        ""
-      )}
 
-      {item.label === "Email" && !emailDisplayed ? (
-        <>
-          <Text style={styles.profileEmail}>{item.value}</Text>
-          {emailDisplayed = true}
-        </>
-      ) : (
-        ""
-      )}
-    </View>
-  ))
-}
 
 
             {/* <TouchableOpacity
@@ -491,6 +420,7 @@ const styles = StyleSheet.create({
 
   section: {
     paddingTop: 12,
+    backgroundColor:"#fff"
   },
 
   sectionTitle: {

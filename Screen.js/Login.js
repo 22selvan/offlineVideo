@@ -357,7 +357,7 @@ export default function Login({navigation}) {
 
               source={{
 
-                uri: 'https://sukraa.in/wp-content/uploads/2020/08/Sukraa-Logo-111.png',
+                uri: 'https://media.licdn.com/dms/image/v2/C560BAQFbVuMDG5McOg/company-logo_200_200/company-logo_200_200/0/1648105410610/resbee_info_technologies_pvt_ltd_logo?e=2147483647&v=beta&t=YC_8Wv5hUPGe7athWbTpWZk8i_CqqpGxA7OihpzGKgg',
 
               }} />
 
@@ -365,9 +365,14 @@ export default function Login({navigation}) {
 
             <Text style={styles.title}>
 
-              Sign In <Text style={{ color: '#075eec' }}></Text>
+              Learn LMS <Text style={{ color: '#075eec' }}></Text>
 
             </Text>
+            <Text style={styles.signtitle}>
+
+Sign In <Text style={{ color: '#075eec',fontSize:13 }}></Text>
+
+</Text>
 
  
 
@@ -385,7 +390,7 @@ export default function Login({navigation}) {
 
           <View style={styles.input}>
 
-              <Text style={styles.inputLabel}>CRN</Text>
+              <Text style={styles.inputLabel}>User Id</Text>
 
  
 
@@ -399,7 +404,7 @@ export default function Login({navigation}) {
 
                 onChangeText={userId => setForm({ ...form, userId })}
 
-                placeholder="CRN"
+                placeholder="User Id"
 
                 placeholderTextColor="#6b7280"
 
@@ -472,6 +477,7 @@ export default function Login({navigation}) {
                 <View style={styles.btn}>
 
                   <Text style={styles.btnText}>Sign in</Text>
+                  
 
                 </View>
 
@@ -480,8 +486,8 @@ export default function Login({navigation}) {
             </View>
 
  
-
-            <Text style={styles.formLink}>Forgot password?</Text>
+{/* 
+            <Text style={styles.formLink}>Forgot password?</Text> */}
 
           </View>
 
@@ -532,7 +538,13 @@ const styles = StyleSheet.create({
     flexShrink: 1,
 
     flexBasis: 0,
+    backgroundColor:"white"
 
+  },
+  signtitle:{
+     fontSize:22,
+     fontWeight:"600",
+     color:"blue"
   },
 
   title: {
@@ -541,7 +553,7 @@ const styles = StyleSheet.create({
 
     fontWeight: '700',
 
-    color: '#1D2A32',
+    color: 'orange',
 
     marginBottom: 6,
 

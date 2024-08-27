@@ -9,6 +9,9 @@ import { useEffect, useState } from "react";
 import AsyncStorage from '@react-native-async-storage/async-storage'
 // import ShowMedicanList from "../Screen.js/ShowMedicanList";
 import DiagnosisResult from "../Screen.js/DiagnosisResult";
+import VideoSceen from "../Screen.js/VideoSceen";
+import Mp3screen from "../Screen.js/Mp3screen";
+import Powerpoint from "../Screen.js/Powerpoint";
 const image9 = require('../assets/images/boss.png');
 
 const stack = createStackNavigator();
@@ -49,9 +52,9 @@ const HomeScreenStack=()=>{
       </View>
       </TouchableOpacity>
     ) }} name="HomeScreen" component={HomeScreen}/>
-            <stack.Screen options={{ headerTitle: "Diagnosis Result" }} name="DiagnosisResult" component={DiagnosisResult} />
-            {/* <stack.Screen options={{ headerTitle: "Upcoming Leave" }}  name="upcomingLeave" component={UpcomingHoliday} />
-            <stack.Screen options={{ headerTitle: "Apply Leave" }}  name="ApplyLeave" component={ApplyLeave} /> */}
+            <stack.Screen options={{ headerTitle: "Video Screen" }} name="videoscreen" component={VideoSceen} />
+            <stack.Screen options={{ headerTitle: "Mp3 Screen" }}  name="mp3screen" component={Mp3screen} />
+            <stack.Screen options={{ headerTitle: "Power Pointscreen" }}  name="powerpointscreen" component={Powerpoint} />
         </stack.Navigator>
     
     )

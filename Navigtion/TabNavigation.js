@@ -8,6 +8,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import HomeScreenStack from './HomeScreenStack';
 import { ServicesStack } from './ServicesStack';
 import { StyleSheet, Text, View,Image, TouchableOpacity } from 'react-native'
+import Downloads from '../Screen.js/Downloads';
 const image9 = require('../assets/images/boss.png');
 const logOut = require('../assets/images/logout.png');
 
@@ -36,11 +37,11 @@ const MyTabs =()=> {
       })}
 
       >
-        <Tab.Screen name="Service" component={ServicesStack}  options={{
+        <Tab.Screen name="downloaded" component={Downloads}  options={{ title:"Downloads",
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="view-dashboard" size={size} color={color} />
           ),
-          headerShown: false,
+          headerShown: true,
  
         }}/>
         
